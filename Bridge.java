@@ -4,4 +4,5 @@ public interface Bridge<E> {
     public void length(E length);
     public E returnLength();
     public void weightLimit(E lim);
+    public E returnWeightLimit();
 }
