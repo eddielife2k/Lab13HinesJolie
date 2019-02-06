@@ -42,4 +42,8 @@ public abstract class CarBridge<E> implements Bridge<E>
     public int returnNumLanes() {
         return numLanes;
     }
+    public abstract void archRadius(E rad);
+    public abstract void archLength(E c);
+    public abstract void cantileverLength(E length);
+    public abstract void tensions(double[] tensions);
 }
