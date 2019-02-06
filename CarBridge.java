@@ -3,8 +3,10 @@ public abstract class CarBridge<E> implements Bridge<E>
     private E length;
     private String materials;
     private E weightLimit;
-    public CarBridge() {
-        materials = "";
+    public CarBridge(String m, E l, E wL) {
+        materials = m;
+        length = l;
+        weightLimit = wL;
     }
     public void materials(String m) {
     }
