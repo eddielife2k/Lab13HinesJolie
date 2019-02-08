@@ -5,7 +5,9 @@ public abstract class CarBridge<E> implements Bridge<E>
     private E weightLimit;
     private E speedLimit;
     private int numLanes;
+    
     public CarBridge(String[] m, E l, E wL, E sL, int nL) {
+        String temp;
         if( m.length > materials.length ) {
             System.out.println("Only three materials please!");
         }
@@ -19,6 +21,7 @@ public abstract class CarBridge<E> implements Bridge<E>
         numLanes = nL;
     }
     public void materials(String[] m) {
+        String temp;
         if( m.length > materials.length ) {
             System.out.println("Only three materials please!");
         }
@@ -28,7 +31,11 @@ public abstract class CarBridge<E> implements Bridge<E>
         }
     }
     public String returnMaterials() {
-        return materials;
+        String temp = "";
+        for(String str: materials) {
+            temp += str + ", ";
+        }
+        return temp;
     }
     public void length(E l) {
         length = l;
