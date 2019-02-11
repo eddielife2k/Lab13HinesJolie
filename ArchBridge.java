@@ -20,6 +20,12 @@ public class ArchBridge<E> extends CarBridge<E>
   public void archLength(E aL){
       archLength = aL;
   }
+  public E returnArchLength() {
+      return archLength;
+  }
+  public E returnArchRadius() {
+      return archRadius;
+  }
   public void cantileverLength(E length){}
   public void tensions(double[] tensions) {}
 }
