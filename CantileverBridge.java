@@ -1,7 +1,7 @@
 public class CantileverBridge<E>extends CarBridge<E>
 {
     private E cantileverLength;
-  public CantileverBridge(String[] m, E l, E wL, E sL, int nL)
+  public CantileverBridge(String[] m, E l, E wL, E sL, int nL, E cL)
   {
       super(m, l, wL, sL, nL);
       cantileverLength = cL;
@@ -17,6 +17,9 @@ public class CantileverBridge<E>extends CarBridge<E>
     }
  public void cantileverLength(E length){
     cantileverLength = length;
+    }
+    public E returnCantileverLength(){
+        return cantileverLength;
     }
   public void tensions(double[] tensions) {}
 }
