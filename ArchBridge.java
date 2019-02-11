@@ -1,19 +1,25 @@
 
 public class ArchBridge<E> extends CarBridge<E>
 {
-    public ArchBridge(String[] m, E l, E wL, E sL, int nL)
+  private E archLength;
+  private E archRadius;
+  public ArchBridge(String[] m, E l, E wL, E sL, int nL, E aL, E aR)
     {
         super(m,l,wL,sL,nL);
+        archLength = aL;
+        archRadius = aR;
     }
   public void materials(String m){}
   public void length(E l) {}
   public void weightLimit(E lim) {}
   public void speedLimit(E lim) {}
   public void numLanes(int lanes) {}
-  public void archRadius(E max){
-    }
-  public void archLength(E c){
-    }
- public void cantileverLength(E length){}
+  public void archRadius(E aR){
+      archRadius = aR;
+  }
+  public void archLength(E aL){
+      archLength = aL;
+  }
+  public void cantileverLength(E length){}
   public void tensions(double[] tensions) {}
 }
