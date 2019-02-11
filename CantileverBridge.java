@@ -4,7 +4,7 @@ public class CantileverBridge<E>extends CarBridge<E>
   {
       super(m, l, wL, sL, nL);
   }
-  public void materials(String m){}
+  public void materials(String[] m){}
   public void length(E l) {}
   public void weightLimit(E lim) {}
   public void speedLimit(E lim) {}
