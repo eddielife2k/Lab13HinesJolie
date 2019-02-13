@@ -27,7 +27,7 @@ public class SuspensionBridge<E> extends CarBridge<E>
       temp += "The length is " + returnLength() + ".\n";
       temp += "The speed limit is " + returnSpeedLimit() + ".\n";
       temp += "The number of lanes are " + returnNumLanes() + ".\n";
-      temp += returnTensions();
+      temp += "The tensions are " + returnTensions();
       return temp;
   }
 }
