@@ -30,3 +30,4 @@ public class SuspensionBridge<E> extends CarBridge<E>
       temp += returnTensions();
       return temp;
   }
+}
