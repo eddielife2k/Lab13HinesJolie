@@ -1,3 +1,4 @@
+
 public class ArchBridge<E> extends CarBridge<E>
 {
   private E archLength;
@@ -22,4 +23,15 @@ public class ArchBridge<E> extends CarBridge<E>
   }
   public void cantileverLength(E length){}
   public void tensions(double[] tensions) {}
+  public String toString() {
+      String temp = "";
+      temp += returnMaterials() + "\n";
+      temp += "The weight limit is " + returnWeightLimit() + ".\n";
+      temp += "The length is " + returnLength() + ".\n";
+      temp += "The speed limit is " + returnSpeedLimit() + ".\n";
+      temp += "The number of lanes are " + returnNumLanes() + ".\n";
+      temp += "The arch radius is " + returnArchRadius() + ".\n";
+      temp += "The arch length is " + returnArchLength() + ".\n";
+      return temp;
+  }
 }
