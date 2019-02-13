@@ -7,11 +7,6 @@ public class SuspensionBridge<E>extends CarBridge<E>
        super(m, l, wL, sL, nL);
        this.tensions = tensions; 
    }
-  public void materials(String m){}
-  public void length(E l) {}
-  public void weightLimit(E lim) {}
-  public void speedLimit(E lim) {}
-  public void numLanes(int lanes) {}
   public void archRadius(E max){
     }
   public void archLength(E c){
