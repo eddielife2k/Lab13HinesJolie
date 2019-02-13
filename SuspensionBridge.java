@@ -1,28 +1,32 @@
-public class SuspensionBridge<E>extends CarBridge<E>
+public class SuspensionBridge<E> extends CarBridge<E>
 {
-   private double temp;
-   double[] tensions;
-  public SuspensionBridge(String[] m, E l, E wL, E sL, int nL, double[] tensions)
+  private double[] tensions = new double[2];
+  public SuspensionBridge(String[] m, E l, E wL, E sL, int nL, double[] t)
    {
        super(m, l, wL, sL, nL);
-       this.tensions = tensions; 
+       for( int k = 0; k < tensions.length; k++ ) {
+           tensions[k] = t[k];
+       }
    }
-  public void archRadius(E max){
-    }
-  public void archLength(E c){
-    }
+  public void archRadius(E max){}
+  public void archLength(E c){}
   public void cantileverLength(E length){}
-  public void tensions(double[] tensions) {
-    for(int k = 0; k < tensions.length; k++){
-    temp = tensions[k];
-    tensions[k] = temp;
-    }
+  public void tensions(double[] tensions) {}
+  public String returnTensions() {
+      String temp = "[";
+      for( double dob : tensions ) {
+          temp += dob + ", ";
+      }
+      temp += "]";
+      return temp;
   }
-  public String returnTensions(){
+  public String toString() {
       String temp = "";
-      for(double str: tensions){
-          temp += str + ", ";
-        }
-        return temp;
-    }
-}
+      temp += returnMaterials() + "\n";
+      temp += "The weight limit is " + returnWeightLimit() + ".\n";
+      temp += "The length is " + returnLength() + ".\n";
+      temp += "The speed limit is " + returnSpeedLimit() + ".\n";
+      temp += "The number of lanes are " + returnNumLanes() + ".\n";
+      temp += returnTensions();
+      return temp;
+  }
