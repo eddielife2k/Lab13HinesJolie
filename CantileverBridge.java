@@ -25,5 +25,6 @@ public class CantileverBridge<E>extends CarBridge<E>
      temp += "The speed limit is " + returnSpeedLimit() + ".\n";
      temp += "The number of lanes are " + returnNumLanes() + ".\n";
      temp += "The cantilever length is " + returnCantileverLength() + ".\n";
+     return temp;
     }
 }
