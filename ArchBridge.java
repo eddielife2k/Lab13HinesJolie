@@ -1,4 +1,3 @@
-
 public class ArchBridge<E> extends CarBridge<E>
 {
   private E archLength;
@@ -9,11 +8,6 @@ public class ArchBridge<E> extends CarBridge<E>
         archLength = aL;
         archRadius = aR;
     }
-  public void materials(String m){}
-  public void length(E l) {}
-  public void weightLimit(E lim) {}
-  public void speedLimit(E lim) {}
-  public void numLanes(int lanes) {}
   public void archRadius(E aR){
       archRadius = aR;
   }
